@@ -1,12 +1,17 @@
-import './App.css';
-import PostsList from './features/PostsList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PostsList from './container/PostsList';
+import PostDetails from './container/PostDetails';
+import NotFound from './container/NotFound';
 
 function App() {
   return (
-    <div className='appContent'>
-      <h1 className='appTitle'>Get posts</h1> 
-      <PostsList />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<PostsList />} />
+        <Route path='/posts/:id' element={<PostDetails />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 

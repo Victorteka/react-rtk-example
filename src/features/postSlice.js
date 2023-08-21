@@ -15,7 +15,7 @@ export const getPosts = createAsyncThunk(
     }
 )
 
-export const postSlice = createSlice({
+const postSlice = createSlice({
     name: 'posts',
     initialState,
     reducers:{},
@@ -26,7 +26,6 @@ export const postSlice = createSlice({
             })
             .addCase(getPosts.fulfilled, (state, {payload}) => {
                 state.status = 'succeeded'
-                console.log(payload)
                 state.posts = payload
             })
             .addCase(getPosts.rejected, (state, action) => {
