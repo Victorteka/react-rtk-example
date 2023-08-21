@@ -10,7 +10,7 @@ const initialState = {
 export const getPosts = createAsyncThunk(
     'posts/getPosts',
     async () => {
-        const response = axios.get('https://jsonplaceholder.typicode.com/posts')
+        const response =  await axios.get('https://jsonplaceholder.typicode.com/posts')
         return response.data
     }
 )
@@ -24,9 +24,10 @@ export const postSlice = createSlice({
             .addCase(getPosts.pending, (state, action) => {
                 state.status = 'loading'
             })
-            .addCase(getPosts.fulfilled, (state, action) => {
+            .addCase(getPosts.fulfilled, (state, {payload}) => {
                 state.status = 'succeeded'
-                state.posts = action.payload
+                console.log(payload)
+                state.posts = payload
             })
             .addCase(getPosts.rejected, (state, action) => {
                 state.status = 'failed'
