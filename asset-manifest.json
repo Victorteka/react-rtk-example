@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/posts-app/static/css/main.cb3557ca.css",
-    "main.js": "/posts-app/static/js/main.57ae3219.js",
-    "static/js/787.37ea450b.chunk.js": "/posts-app/static/js/787.37ea450b.chunk.js",
-    "index.html": "/posts-app/index.html",
-    "main.cb3557ca.css.map": "/posts-app/static/css/main.cb3557ca.css.map",
-    "main.57ae3219.js.map": "/posts-app/static/js/main.57ae3219.js.map",
-    "787.37ea450b.chunk.js.map": "/posts-app/static/js/787.37ea450b.chunk.js.map"
+    "main.css": "/react-rtk-example/static/css/main.cb3557ca.css",
+    "main.js": "/react-rtk-example/static/js/main.f9d682c7.js",
+    "static/js/787.37ea450b.chunk.js": "/react-rtk-example/static/js/787.37ea450b.chunk.js",
+    "index.html": "/react-rtk-example/index.html",
+    "main.cb3557ca.css.map": "/react-rtk-example/static/css/main.cb3557ca.css.map",
+    "main.f9d682c7.js.map": "/react-rtk-example/static/js/main.f9d682c7.js.map",
+    "787.37ea450b.chunk.js.map": "/react-rtk-example/static/js/787.37ea450b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb3557ca.css",
-    "static/js/main.57ae3219.js"
+    "static/js/main.f9d682c7.js"
   ]
 }
