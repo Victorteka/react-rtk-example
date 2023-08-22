@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getPosts, getPostsError, getPostsStatus, selectAllPosts } from './postSlice'
+import { getPosts, getPostsError, getPostsStatus, selectAllPosts } from '../features/postSlice'
 import BasicCard from '../components/BasicCard'
 
 const PostsList = () => {
@@ -18,18 +18,18 @@ const PostsList = () => {
 
     let content;
     if(status === 'loading'){
-        content = <h1>Loading</h1>
+        content = <h1>Loading ...</h1>
     } else if(status === 'succeeded'){
         content = posts.map(post =>(
-            <BasicCard key={post.id} post={post} />
+            <BasicCard key={post.id} post={post} readMoreClicked={true} />
         ))
     } else if(status === 'failed'){
         content = <h1>{error}</h1>
     }
   return (
-    <>
+    <div>
         {content}
-    </>
+    </div>
   )
 }
 
