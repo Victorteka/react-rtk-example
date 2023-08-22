@@ -18,7 +18,7 @@ const PostDetails = () => {
 
   let content;
     if(status === 'loading'){
-        content = <h1>Loading</h1>
+        content = <h1>Loading ...</h1>
     } else if(status === 'succeeded'){
       
       content = <BasicCard post={post}/>

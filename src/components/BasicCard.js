@@ -7,7 +7,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
-export default function BasicCard({post}) {
+export default function BasicCard({ readMoreClicked, post }) {
+
+  const readMore = !readMoreClicked
+
   return (
     <Card sx={{ minWidth: 275 }} style={{marginTop:8}}>
       <CardContent>
@@ -15,11 +18,13 @@ export default function BasicCard({post}) {
           {post.title}
         </Typography>
         <Typography variant="body2">
-          {post.body.substring(0,100)} ...
+          {readMore ? post.body : post.body.substring(0,100)} 
         </Typography>
       </CardContent>
       <CardActions>
-        <Link to={`/posts/${post.id}`}><Button size="small">Read More</Button></Link>
+        {
+          readMore ? null : <Link to={`/posts/${post.id}`}><Button size="small">Read More</Button></Link>
+        }
       </CardActions>
     </Card>
   );
