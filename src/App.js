@@ -6,9 +6,9 @@ import Layout from './container/Layout';
 
 function App() {
   return (
-    <Router>
+    <Router basename={ `/${process.env.PUBLIC_URL}`}>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path='' element={<Layout />}>
           <Route index  element={<PostsList />} />
           <Route path='/posts/:id' element={<PostDetails />} />
           <Route path='*' element={<NotFound />} />
