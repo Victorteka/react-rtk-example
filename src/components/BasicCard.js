@@ -12,7 +12,7 @@ export default function BasicCard({ readMoreClicked, post }) {
   const readMore = !readMoreClicked
 
   return (
-    <Card sx={{ minWidth: 275 }} style={{marginTop:8}}>
+    <Card sx={{ minWidth: 275 }} style={{marginTop:8}} data-testid='basic-card'>
       <CardContent>
         <Typography variant='h6'  sx={{ fontSize: 16 }} gutterBottom>
           {post.title}
